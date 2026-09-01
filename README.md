@@ -29,16 +29,16 @@ A backend-only clone of **Saraha**, the anonymous messaging platform, built as p
 
 ## Tech Stack
 
-| Layer          | Technology            |
-|----------------|------------------------|
-| Runtime        | Node.js               |
-| Framework      | Express.js             |
-| Database       | MongoDB                |
-| ODM            | Mongoose                |
-| Authentication | JSON Web Token (JWT)    |
-| Validation     | Joi                     |
-| Password Hash  | bcrypt                  |
-| Environment    | dotenv                  |
+| Layer          | Technology           |
+| -------------- | -------------------- |
+| Runtime        | Node.js              |
+| Framework      | Express.js           |
+| Database       | MongoDB              |
+| ODM            | Mongoose             |
+| Authentication | JSON Web Token (JWT) |
+| Validation     | Joi                  |
+| Password Hash  | bcrypt               |
+| Environment    | dotenv               |
 
 ## Project Structure
 
@@ -78,19 +78,6 @@ cd saraha-app
 npm install
 ```
 
-### Environment Variables
-
-Create a `.env` file in the root directory based on `.env.example`:
-
-```env
-PORT=3000
-DB_URI=mongodb://localhost:27017/saraha-app
-JWT_ACCESS_SECRET=your_access_secret
-JWT_REFRESH_SECRET=your_refresh_secret
-EMAIL_USER=your_email@example.com
-EMAIL_PASS=your_email_app_password
-```
-
 ### Run the App
 
 ```bash
@@ -107,29 +94,29 @@ The server will run on `http://localhost:3000` by default.
 
 ### Auth
 
-| Method | Endpoint                     | Description                |
-|--------|-------------------------------|-----------------------------|
-| POST   | `/auth/signup`                | Register a new user         |
-| POST   | `/auth/login`                 | Login and receive tokens    |
-| GET    | `/auth/verify/:token`         | Verify email                |
-| POST   | `/auth/forgot-password`       | Request password reset      |
-| POST   | `/auth/reset-password`        | Reset password               |
+| Method | Endpoint                | Description              |
+| ------ | ----------------------- | ------------------------ |
+| POST   | `/auth/signup`          | Register a new user      |
+| POST   | `/auth/login`           | Login and receive tokens |
+| GET    | `/auth/verify/:token`   | Verify email             |
+| POST   | `/auth/forgot-password` | Request password reset   |
+| POST   | `/auth/reset-password`  | Reset password           |
 
 ### User
 
-| Method | Endpoint          | Description               |
-|--------|--------------------|-----------------------------|
-| GET    | `/user/profile`   | Get logged-in user profile |
-| PUT    | `/user/profile`   | Update profile              |
-| DELETE | `/user/profile`   | Delete/deactivate account   |
+| Method | Endpoint        | Description                |
+| ------ | --------------- | -------------------------- |
+| GET    | `/user/profile` | Get logged-in user profile |
+| PUT    | `/user/profile` | Update profile             |
+| DELETE | `/user/profile` | Delete/deactivate account  |
 
 ### Message
 
-| Method | Endpoint                  | Description                        |
-|--------|-----------------------------|--------------------------------------|
-| POST   | `/message/send/:userId`    | Send an anonymous message to a user |
-| GET    | `/message`                 | Get all messages for logged-in user |
-| DELETE | `/message/:messageId`      | Delete a specific message           |
+| Method | Endpoint                | Description                         |
+| ------ | ----------------------- | ----------------------------------- |
+| POST   | `/message/send/:userId` | Send an anonymous message to a user |
+| GET    | `/message`              | Get all messages for logged-in user |
+| DELETE | `/message/:messageId`   | Delete a specific message           |
 
 > **Note:** Adjust the routes above to match your actual implementation.
 
@@ -139,7 +126,7 @@ You can test the endpoints using **Postman** or **Thunder Client**. A Postman co
 
 ## Author
 
-Built by **[Your Name]** as part of the Route Academy Backend Diploma.
+Built by **[Mohand Walid]** as part of the Route Academy Backend Diploma.
 
 ## License
 
